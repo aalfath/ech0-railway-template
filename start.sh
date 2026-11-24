@@ -120,7 +120,7 @@ fi
 ECH0_SERVER_HOST=127.0.0.1 ECH0_SERVER_PORT="$INTERNAL_PORT" su-exec 10001:10001 /app/ech0 serve &
 epid=$!
 wait_health "$INTERNAL_PORT" 120 || { kill "$epid" 2>/dev/null || true; die "Ech0 did not become healthy"; }
-su-exec 10001:10001 caddy run --config /etc/railway/Caddyfile --adapter caddyfile &
+su-exec 10001:10001 caddy run --config /etc/caddy/Caddyfile --adapter caddyfile &
 cpid=$!
 log "Ech0 $(http_get "http://127.0.0.1:$INTERNAL_PORT/healthz" | sed -n 's/.*"version":"\([^"]*\)".*/\1/p') listening on :$PORT (GOMAXPROCS=$GOMAXPROCS GOMEMLIMIT=${GOMEMLIMIT:-none})"
 
