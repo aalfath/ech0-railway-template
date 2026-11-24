@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/ech0-1?utm_medium=integration&utm_source=button&utm_campaign=ech0)
+
 # Ech0 on Railway
 
 One-click Railway template for [Ech0](https://github.com/lin-snow/Ech0), a lightweight self-hosted personal microblog: publish short notes, links and media to your own timeline, with RSS, optional comments, passkeys and OAuth2 sign-in.
